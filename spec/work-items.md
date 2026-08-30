@@ -139,7 +139,7 @@ Verification: contract tests, auth/authorization tests, webhook signature/idempo
 ### W025 — Merchant/developer integration examples
 Requirements: LW-COM-004, LW-API-006
 Dependencies: W017
-Acceptance: API-AC-05, API-AC-06
+Acceptance: API-AC-05, API-AC-06, COM-AC-04
 Surfaces: examples, sdk
 Verification: example integration E2E tests
 
@@ -207,17 +207,16 @@ Verification: contract compatibility suite plus platform smoke tests
 
 ## Phase 8 — Production Proof
 
-
-### W029 — External distribution and effect packaging
+### W028 — External distribution and effect packaging
 Requirements: LW-DIST-001..003, LW-SOC-006
 Dependencies: W006, W008, W024, W027
 Acceptance: DIST-AC-01, DIST-AC-02
 Surfaces: distribution, social, share/export
 Verification: package contract tests, target-adapter isolation tests, external-state separation tests
 
-### W030 — End-to-end LooksWise lifecycle
+### W029 — End-to-end LooksWise lifecycle
 Requirements: all v1.0 requirements
-Dependencies: W019, W024, W025, W026, W027, W029
+Dependencies: W019, W024, W025, W026, W027, W028
 Acceptance: E2E-AC-01 plus all mandatory criteria exercised by the seeded scenario
 Surfaces: E2E fixtures, evidence, docs
 Verification: full production-like lifecycle test and evidence package
