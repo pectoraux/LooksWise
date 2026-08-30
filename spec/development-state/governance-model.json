@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "architectureVersion": "1.0",
+  "architectureStatus": "FROZEN",
+  "authority": {
+    "architecture": "architect",
+    "workflowState": "workflow-engine",
+    "merge": "architect",
+    "domainState": "application-backend"
+  },
+  "invariants": [
+    "one-work-item-per-branch-pr",
+    "evidence-before-approval",
+    "immutable-frozen-architecture",
+    "provider-independence",
+    "server-side-authority",
+    "social-audience-policy-server-enforced",
+    "medical-aesthetic-isolation",
+    "reality-evidence-tier-required"
+  ],
+  "assuranceProfiles": [
+    "LIGHT",
+    "STANDARD",
+    "HIGH_ASSURANCE",
+    "CRITICAL"
+  ]
+}

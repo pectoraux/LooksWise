@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/try-on.schema.json",
+  "title": "LooksWise Try-On Request",
+  "type": "object",
+  "required": [
+    "productId",
+    "input",
+    "runtime",
+    "requestId"
+  ],
+  "properties": {
+    "productId": {
+      "type": "string"
+    },
+    "input": {
+      "type": "object"
+    },
+    "runtime": {
+      "enum": [
+        "live",
+        "photo",
+        "video",
+        "high_fidelity"
+      ]
+    },
+    "requestId": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "individual",
+        "composite"
+      ]
+    }
+  }
+}

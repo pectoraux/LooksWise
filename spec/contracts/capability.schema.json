@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/capability.schema.json",
+  "title": "LooksWise Capability",
+  "type": "object",
+  "required": ["capability", "implementationId", "version"],
+  "properties": {
+    "capability": {"type": "string"},
+    "implementationId": {"type": "string"},
+    "version": {"type": "string"},
+    "requirements": {"type": "object"}
+  }
+}

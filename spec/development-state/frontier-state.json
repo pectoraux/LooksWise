@@ -1,0 +1,227 @@
+{
+  "architectureVersion": "1.0",
+  "programStatus": "PLANNED",
+  "currentPhase": "FOUNDATION",
+  "workItems": {
+    "W001": {
+      "status": "READY",
+      "dependencies": []
+    },
+    "W002": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W001"
+      ]
+    },
+    "W003": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W001",
+        "W002"
+      ]
+    },
+    "W004": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W002",
+        "W003"
+      ]
+    },
+    "W005": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W004"
+      ]
+    },
+    "W006": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W004",
+        "W005"
+      ]
+    },
+    "W007": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W004",
+        "W006"
+      ]
+    },
+    "W008": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W005",
+        "W006",
+        "W007"
+      ]
+    },
+    "W009": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W006",
+        "W008"
+      ]
+    },
+    "W010": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W002",
+        "W006",
+        "W003"
+      ]
+    },
+    "W011": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W010"
+      ]
+    },
+    "W012": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W005",
+        "W006",
+        "W010"
+      ]
+    },
+    "W013": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W003",
+        "W008"
+      ]
+    },
+    "W014": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W005",
+        "W006",
+        "W007"
+      ]
+    },
+    "W015": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W009",
+        "W006"
+      ]
+    },
+    "W016": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W005",
+        "W007",
+        "W008"
+      ]
+    },
+    "W017": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W006",
+        "W008",
+        "W016"
+      ]
+    },
+    "W018": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W003",
+        "W015",
+        "W016"
+      ]
+    },
+    "W019": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W018",
+        "W008"
+      ]
+    },
+    "W020": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W005",
+        "W008",
+        "W018"
+      ]
+    },
+    "W021": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W008",
+        "W014",
+        "W019"
+      ]
+    },
+    "W022": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W008",
+        "W014",
+        "W019"
+      ]
+    },
+    "W023": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W008",
+        "W016",
+        "W018",
+        "W019"
+      ]
+    },
+    "W024": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W010",
+        "W012",
+        "W013",
+        "W014"
+      ]
+    },
+    "W025": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W017"
+      ]
+    },
+    "W026": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W020",
+        "W019"
+      ]
+    },
+    "W027": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W014",
+        "W017",
+        "W024"
+      ]
+    },
+    "W029": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W006",
+        "W008",
+        "W024",
+        "W027"
+      ]
+    },
+    "W030": {
+      "status": "BLOCKED",
+      "dependencies": [
+        "W019",
+        "W024",
+        "W025",
+        "W026",
+        "W027",
+        "W029"
+      ]
+    }
+  },
+  "frontier": [
+    "W001"
+  ]
+}

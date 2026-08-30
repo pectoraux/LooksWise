@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/look.schema.json",
+  "title": "LooksWise Look",
+  "type": "object",
+  "required": ["id", "version", "transformationId", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "version": {"type": "integer", "minimum": 1},
+    "transformationId": {"type": "string"},
+    "status": {"enum": ["DRAFT", "PUBLISHED", "WITHDRAWN"]}
+  },
+  "additionalProperties": true
+}

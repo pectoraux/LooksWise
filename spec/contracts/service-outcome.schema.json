@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/service-outcome.schema.json",
+  "title": "LooksWise Service Outcome",
+  "type": "object",
+  "required": ["outcomeId", "simulationId", "consentScope", "evidence"],
+  "properties": {
+    "outcomeId": {"type": "string"},
+    "simulationId": {"type": "string"},
+    "consentScope": {"type": "string"},
+    "evidence": {"type": "object"}
+  }
+}

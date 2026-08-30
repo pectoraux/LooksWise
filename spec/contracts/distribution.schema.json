@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/distribution.schema.json",
+  "title": "LooksWise Distribution Package",
+  "type": "object",
+  "required": ["distributionId", "lookVersionId", "target", "provenanceRef"],
+  "properties": {
+    "distributionId": {"type": "string"},
+    "lookVersionId": {"type": "string"},
+    "target": {"type": "string"},
+    "provenanceRef": {"type": "string"},
+    "status": {"enum": ["CREATED", "SUBMITTED", "PUBLISHED", "FAILED", "REJECTED"]},
+    "artifactRefs": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

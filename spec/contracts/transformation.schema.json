@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/transformation.schema.json",
+  "title": "LooksWise Transformation Recipe",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "inputs",
+    "nodes",
+    "edges",
+    "constraints",
+    "supportedRuntimes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "constraints": {
+      "type": "object"
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "supportedRuntimes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "live",
+          "photo",
+          "video",
+          "high_fidelity",
+          "try_on"
+        ]
+      }
+    },
+    "validationState": {
+      "enum": [
+        "DRAFT",
+        "VALID",
+        "REJECTED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

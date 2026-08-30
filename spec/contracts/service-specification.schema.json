@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/service-specification.schema.json",
+  "title": "LooksWise Service Specification",
+  "type": "object",
+  "required": ["id", "lookVersionId", "recipeVersion", "simulationArtifactId"],
+  "properties": {
+    "id": {"type": "string"},
+    "lookVersionId": {"type": "string"},
+    "recipeVersion": {"type": "integer", "minimum": 1},
+    "simulationArtifactId": {"type": "string"},
+    "requestedParameters": {"type": "object"},
+    "constraints": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/execution-contract.schema.json",
+  "title": "LooksWise Execution Contract",
+  "type": "object",
+  "required": ["executionId", "capabilities", "input", "runtime"],
+  "properties": {
+    "executionId": {"type": "string"},
+    "capabilities": {"type": "array", "items": {"type": "string"}},
+    "input": {"type": "object"},
+    "runtime": {"enum": ["live", "photo", "video", "high_fidelity", "try_on"]}
+  }
+}

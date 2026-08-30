@@ -1,0 +1,26 @@
+name: Architecture Change Request
+description: Request a change to frozen LooksWise architecture.
+title: "ACR: "
+labels: [architecture-change]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Concise statement of the architectural change.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why the frozen architecture is insufficient.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Requirements, invariants, data, security, API and implementation impact.
+    validations:
+      required: true

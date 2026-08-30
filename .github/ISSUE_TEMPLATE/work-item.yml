@@ -1,0 +1,29 @@
+name: Work Item
+description: Create a governed implementation Work Item.
+title: "W___: "
+labels: [work-item]
+body:
+  - type: input
+    id: objective
+    attributes:
+      label: Objective
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+    validations:
+      required: true
+  - type: textarea
+    id: surfaces
+    attributes:
+      label: Change Surfaces
+    validations:
+      required: true

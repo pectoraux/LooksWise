@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/social-post.schema.json",
+  "title": "LooksWise Social Look Post",
+  "type": "object",
+  "required": [
+    "id",
+    "authorId",
+    "lookVersion",
+    "opinionPolicy",
+    "visibilityPolicy",
+    "moderationState"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "authorId": {
+      "type": "string"
+    },
+    "lookVersion": {
+      "type": "string"
+    },
+    "opinionPolicy": {
+      "type": "object"
+    },
+    "externalSharing": {
+      "type": "object"
+    },
+    "visibilityPolicy": {
+      "type": "object"
+    },
+    "moderationState": {
+      "enum": [
+        "PENDING",
+        "VISIBLE",
+        "LIMITED",
+        "REMOVED"
+      ]
+    },
+    "engagementCounters": {
+      "type": "object"
+    }
+  }
+}

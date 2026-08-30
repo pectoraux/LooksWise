@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lookswise.dev/schemas/opinion-policy.schema.json",
+  "title": "LooksWise Opinion Audience Policy",
+  "type": "object",
+  "required": ["mode"],
+  "properties": {
+    "mode": {"enum": ["all_eligible", "followers", "custom"]},
+    "genderRestriction": {"type": ["string", "null"]},
+    "allowedAudienceRef": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

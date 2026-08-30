@@ -1,0 +1,15 @@
+{
+  "program": "LooksWise",
+  "architectureVersion": "1.0",
+  "status": "PLANNED",
+  "phase": "FOUNDATION",
+  "lastAuthoritativeEvent": "architecture-freeze",
+  "activeWorkItem": "W001",
+  "mergeAuthority": "architect",
+  "notes": [
+    "Zeck intentionally excluded from v1.0 architecture.",
+    "Social validation is first-class.",
+    "Reality Engine is first-class.",
+    "Platform API is first-class."
+  ]
+}
