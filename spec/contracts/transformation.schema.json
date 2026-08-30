@@ -3,66 +3,95 @@
   "$id": "https://lookswise.dev/schemas/transformation.schema.json",
   "title": "LooksWise Transformation Recipe",
   "type": "object",
-  "required": [
-    "id",
-    "version",
-    "inputs",
-    "nodes",
-    "edges",
-    "constraints",
-    "supportedRuntimes"
-  ],
+  "additionalProperties": false,
+  "required": ["id", "version", "inputs", "nodes", "edges", "constraints", "supportedRuntimes"],
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "version": {
-      "type": "integer",
-      "minimum": 1
-    },
+    "id": {"type": "string", "minLength": 1},
+    "version": {"type": "integer", "minimum": 1},
+    "inputs": {"$ref": "#/$defs/inputDeclaration"},
     "nodes": {
       "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "constraints": {
-      "type": "object"
-    },
-    "inputs": {
-      "type": "object"
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/node"}
     },
     "edges": {
       "type": "array",
-      "items": {
-        "type": "object"
-      }
+      "items": {"$ref": "#/$defs/edge"}
     },
+    "constraints": {"$ref": "#/$defs/constraints"},
     "assets": {
       "type": "array",
-      "items": {
-        "type": "object"
-      }
+      "items": {"$ref": "#/$defs/assetRef"}
     },
     "supportedRuntimes": {
       "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
       "items": {
-        "enum": [
-          "live",
-          "photo",
-          "video",
-          "high_fidelity",
-          "try_on"
-        ]
+        "enum": ["live", "photo", "video", "high_fidelity", "try_on"]
       }
     },
     "validationState": {
-      "enum": [
-        "DRAFT",
-        "VALID",
-        "REJECTED"
-      ]
+      "enum": ["DRAFT", "VALID", "REJECTED"]
     }
   },
-  "additionalProperties": true
+  "$defs": {
+    "inputDeclaration": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "required": {"type": "array", "items": {"type": "string"}},
+        "optional": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "operation", "target", "parameters"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "operation": {"type": "string", "minLength": 1},
+        "target": {
+          "oneOf": [
+            {"type": "string", "minLength": 1},
+            {"type": "array", "minItems": 1, "items": {"type": "string"}}
+          ]
+        },
+        "parameters": {"type": "object"},
+        "constraints": {"type": "object"},
+        "dependsOn": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": {"type": "string", "minLength": 1},
+        "to": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["data", "ordering", "constraint"]}
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "preserve": {"type": "array", "items": {"type": "string"}},
+        "prohibit": {"type": "array", "items": {"type": "string"}},
+        "quality": {"type": "object"},
+        "runtime": {"type": "object"},
+        "consent": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "assetRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1}
+      }
+    }
+  }
 }
