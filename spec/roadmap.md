@@ -23,7 +23,7 @@ W018 → W019
 ## Wave 7 — Production verticals
 W021, W022, W023
 
-These now correctly follow W019, because the roadmap must respect the dependency graph.
+These correctly follow W019 because the roadmap must respect the dependency graph.
 
 ## Wave 8 — Safety + cross-platform
 W020 → W026; W027
@@ -31,11 +31,11 @@ W020 → W026; W027
 W027 covers consumer, professional Look Studio, merchant/product-facing client adapters and shared SDK contracts.
 
 ## Wave 9 — External distribution
-W029
+W028
 
 Generate target-specific effect/share packages without making external platforms authoritative.
 
 ## Wave 10 — Production proof
-W030
+W029
 
 Prove professional authoring → consumer simulation → social validation → external distribution → service/commerce → real outcome → fidelity calibration → API reuse.
