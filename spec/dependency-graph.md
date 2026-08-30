@@ -28,8 +28,8 @@ W010 + W011 + W012 + W013 + W014 → W024 Consumer Look Browser
 W016 + W017 → W025 Merchant/developer examples
 W020 + W019 → W026 Medical-aesthetic validation
 W014 + W017 + W024 → W027 Cross-platform clients and SDKs
-W006 + W008 + W024 + W027 → W029 External distribution/effect packaging
-W019 + W024 + W025 + W026 + W027 + W029 → W030 End-to-end production proof
+W006 + W008 + W024 + W027 → W028 External distribution/effect packaging
+W019 + W024 + W025 + W026 + W027 + W028 → W029 End-to-end production proof
 ```
 
 Dependency authority is `spec/development-state/frontier-state.json`; this graph is the human-readable mirror.
